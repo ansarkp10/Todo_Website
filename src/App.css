@@ -1,0 +1,179 @@
+/* Basic reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; /* Light grey background */
+}
+
+.app {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff; /* White background for the app container */
+  margin: 30px auto;
+  width: 70%;
+  max-width: 800px; /* Max width for larger screens */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+  border-radius: 10px;
+  animation: fadeIn 1s ease-in-out; /* Apply fade-in animation */
+}
+
+.mainHeading {
+  margin-bottom: 20px;
+}
+
+.mainHeading h1 {
+  color: #4caf50; /* Green color */
+  animation: bounce 1s infinite alternate; /* Bounce animation */
+}
+
+.input {
+  display: flex;
+  flex-wrap: wrap; /* Wrap input fields on smaller screens */
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.input input, .search input {
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+  border: 2px solid #4caf50; /* Green border */
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+
+.input select {
+  margin-right: 10px;
+}
+
+.input input:focus, .search input:focus {
+  border-color: #388e3c; /* Darker green on focus */
+  box-shadow: 0 0 5px #388e3c;
+}
+
+.add-icon {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #4caf50; /* Green background */
+  color: white;
+  border-radius: 4px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.add-icon:hover {
+  background-color: #388e3c; /* Darker green on hover */
+  transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+.todo-table {
+  width: 100%; /* Full width for table */
+  margin: 0 auto;
+  border-collapse: collapse;
+  animation: fadeInUp 1s ease-in-out; /* Fade-in-up animation */
+}
+
+.todo-table, .todo-table th, .todo-table td {
+  border: 1px solid #ddd;
+}
+
+.todo-table th, .todo-table td {
+  padding: 12px;
+  text-align: center;
+}
+
+.todo-table th {
+  background-color: #4caf50; /* Green background for table header */
+  color: white;
+}
+
+.todo-table tr:nth-child(even) {
+  background-color: #f9f9f9; /* Light grey for even rows */
+}
+
+.todo-table tr:nth-child(odd) {
+  background-color: #ffffff; /* White for odd rows */
+}
+
+.todo-table tr:hover {
+  background-color: #f1f1f1; /* Slight grey on row hover */
+  transition: background-color 0.3s ease;
+}
+
+.edit-icon, .delete-icon {
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.edit-icon {
+  color: #007bff; /* Blue color for edit */
+}
+
+.edit-icon:hover {
+  color: #0056b3;
+  transform: scale(1.2); /* Increase size on hover */
+}
+
+.delete-icon {
+  color: #dc3545; /* Red color for delete */
+}
+
+.delete-icon:hover {
+  color: #c82333;
+  transform: scale(1.2); /* Increase size on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+  .input {
+    flex-direction: column; /* Stack input fields vertically on smaller screens */
+  }
+
+  .input input, .input select, .search input {
+    width: 100%; /* Full width for inputs */
+    margin: 5px 0; /* Margin for spacing */
+  }
+
+  .add-icon {
+    width: 100%; /* Full width for add icon */
+  }
+
+  .todo-table {
+    font-size: 14px; /* Smaller font size for tables */
+  }
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
